@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key up</title>
+    <style>
+        input{
+            display: block;
+            margin: auto;
+            margin-top: 10px;
+            padding: 5px 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            margin: auto;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="renk" placeholder="Color">
+    <input type="number" id="genişlik" placeholder="width">
+    <input type="number" id="yükseklik" placeholder="Height">
+    <input type="number" id="border" placeholder="Border-radius">
+    <input type="color" id="palet" placeholder="background-color">
+    <div></div>
+
+
+
+
+    
+
+    <script src="jquery.js"></script>
+    <script>
+           $("#renk").keyup(function(){
+            renk= $("#renk").val();
+            $("div").css("background-color",renk);
+           })
+           $("#genişlik").keyup(function(){
+            genişlik= $("#genişlik").val();
+            $("div").css("width",genişlik+"px");
+           })
+           $("#yükseklik").keyup(function(){
+            yükseklik= $("#yükseklik").val();
+            $("div").css("height",yükseklik+"px");
+           })
+           $("#border").keyup(function(){
+            border= $("#border").val();
+            $("div").css("Border-radius",border+"px");
+           })
+           $("#palet").change(function(){
+            palet= $("#palet").val();
+            $("body").css("background-color",palet);
+           })
+    </script>
+</body>
+</html>
